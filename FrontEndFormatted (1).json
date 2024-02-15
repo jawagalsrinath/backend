@@ -1,0 +1,977 @@
+{
+  "Sections": {
+    "Section1": [
+      {
+        "FrontEndLabel": "ProductType",
+        "InputType": "DropDown",
+        "Values": [
+          "Casual Shirt",
+          "T-Shirt",
+          "Formal Shirt"
+        ],
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "minUniqueItems": 1,
+          "maxUniqueItems": 1
+        },
+        "InfoMessage": "A category that best describes the class of product.",
+        "ErrorMessage": "Product Type is Required",
+        "FieldType": "Requried",
+        "editable": false,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Seller SKU",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
+          "maxUtf8ByteLength": 100
+        },
+        "InfoMessage": "The SKU must be unique for each product listed",
+        "ErrorMessage": "SellerSku is Required",
+        "FieldType": "Requried",
+        "editable": false,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Bullets",
+        "InputType": "string",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 700,
+          "Multiple": true,
+          "MinItems": 1,
+          "MaxItems": 10
+        },
+        "InfoMessage": "Brief descriptive text, called out via a bullet point, regarding a specific aspect of the product. These display directly under or next to your product photo, it is useful to put interesting information in these fields. Do NOT use all caps or abbreviations. Please do NOT use for fabric content, care instructions or country as these are populated in different fields.",
+        "ErrorMessage": "Bullet Points is Required",
+        "FieldType": "Requried",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      }
+    ],
+    "Section2": [
+      {
+        "FrontEndLabel": "Brand Name",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40,
+          "maxUtf8ByteLength": 100
+        },
+        "InfoMessage": "Name of the brand under which products are sold. Usually mentioned on product or package. In case name is not mentioned, kindly use Generic as brand name",
+        "ErrorMessage": "Brand Name is Required",
+        "FieldType": "Requried",
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Condition Type",
+        "InputType": "DropDown",
+        "Values": [
+          {
+            "club_club": "Club",
+            "collectible_acceptable": "Collectible - Acceptable",
+            "collectible_good": "Collectible - Good",
+            "collectible_like_new": "Collectible - Like New",
+            "collectible_very_good": "Collectible - Very Good",
+            "new_new": "New",
+            "new_oem": "New - OEM",
+            "new_open_box": "New - Open Box",
+            "refurbished_refurbished": "Refurbished",
+            "used_acceptable": "Used - Acceptable",
+            "used_good": "Used - Good",
+            "used_like_new": "Used - Like New",
+            "used_very_good": "Used - Very Good"
+          }
+        ],
+        "Validation": {},
+        "InfoMessage": "Provide the actual condition type of the product",
+        "ErrorMessage": "",
+        "FieldType": "Optional",
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Merchant Suggested ASIN",
+        "InputType": "DropDown",
+        "Values": {},
+        "Validation": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 10
+        },
+        "InfoMessage": "Provide an ASIN for your product if one exists. If a value is not provided, the system will attempt a match based on the External Product ID.",
+        "ErrorMessage": "",
+        "FieldType": "Optional",
+        "editable": false,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Manufacturer Part Number",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40,
+          "maxUtf8ByteLength": 100
+        },
+        "InfoMessage": "Provide the part number. For many products, this will be identical to the model number however some manufacturers distinguish part number from model number",
+        "ErrorMessage": "Manufacturer Part Number is Required",
+        "FieldType": "Requried",
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Product id Type",
+        "InputType": "DropDown",
+        "Values": [
+          {
+            "ean": "EAN",
+            "gtin": "GTIN",
+            "upc": "UPC",
+            "gcid": "GCID",
+            "asin": "ASIN"
+          }
+        ],
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "InfoMessage": "Provide the corresponding external product id value based on the type that was selected",
+        "ErrorMessage": "Product Id Type is Required",
+        "FieldType": "Requried",
+        "editable": false,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Product id",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "InfoMessage": "Provide the corresponding external product id value based on the type that was selected",
+        "ErrorMessage": "Product Id is Required",
+        "FieldType": "Requried",
+        "editable": false,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Product id Exemption",
+        "InputType": "Boolean",
+        "Values": [
+          {
+            "true": "Yes",
+            "false": "No"
+          }
+        ],
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "InfoMessage": "Please specify if the product is exempt from supplier declared external product identifiers.",
+        "ErrorMessage": "",
+        "FieldType": "Optional",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Closure",
+        "InputType": "DropDown",
+        "Values": {
+          "Buckle": "Buckle",
+          "Button": "Button",
+          "Double Ring": "Double Ring",
+          "Drawstring": "Drawstring",
+          "Hook and Eye": "Hook and Eye",
+          "Hook and Loop": "Hook and Loop",
+          "Magnetic": "Magnetic",
+          "Pull On": "Pull On",
+          "Snap": "Snap",
+          "Zipper": "Zipper"
+        },
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "InfoMessage": "Provide the type of closing mechanism used by the item. The closing type allows a user to fully wear, seal, or close the item",
+        "ErrorMessage": "",
+        "FieldType": "Optional",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Model Name",
+        "InputType": "String",
+        "Values": {},
+        "Validation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "InfoMessage": "Specify the model name of the product as defined by the manufacturer or brand excluding item type, color, brand or size",
+        "ErrorMessage": "Model Name is Required",
+        "FieldType": "Requried",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Model Number",
+        "InputType": "String",
+        "Values": {},
+        "Validation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "InfoMessage": "Provide the manufacturer 's model number for the item",
+        "ErrorMessage": "Model Name is Required",
+        "FieldType": "Optional",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Prodoct Care Instruction",
+        "InputType": "DropDown",
+        "Values": {
+          "Dry Clean Only": "Dry Clean Only",
+          "Hand Wash Only": "Hand Wash Only",
+          "Machine Wash": "Machine Wash"
+        },
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItemns": 1
+        },
+        "InfoMessage": "Provide instructions related to how to care for the item",
+        "ErrorMessage": "Product Care Instruction  is Required",
+        "FieldType": "Required",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Item Name",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 200
+        },
+        "InfoMessage": "Provide a name for the item including brand, color, fit and size, if available.",
+        "ErrorMessage": "Item Name is Required",
+        "FieldType": "Requried",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Product Description",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 10000
+        },
+        "InfoMessage": "Provide a text description of the product. This information will appear in paragraph form on the detail page of your product. Include unique product features, product line details, and product specifications. Do not use all caps.",
+        "ErrorMessage": "Product Description is Required",
+        "FieldType": "Requried",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Browser Nodes",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 15
+        },
+        "InfoMessage": "Indicate the browse node or section of the Amazon website where the product will be assigned. This allows customers to find the product on the website easily. If you don't provide a node or if you provide an incorrect node, customers may not be able to find your product.",
+        "ErrorMessage": "Browser Node is Required",
+        "FieldType": "Requried",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon"
+        ]
+      },
+      {
+        "FrontEndLabel": "Manufacturer",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100
+        },
+        "InfoMessage": "Specify the manufacturer of the product.",
+        "ErrorMessage": "Manufacture Details is Required",
+        "FieldType": "Requried",
+        "editable": false,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon"
+        ]
+      },
+      {
+        "FrontEndLabel": "Browser Nodes",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 15
+        },
+        "InfoMessage": "Indicate the browse node or section of the Amazon website where the product will be assigned. This allows customers to find the product on the website easily. If you don't provide a node or if you provide an incorrect node, customers may not be able to find your product.",
+        "ErrorMessage": "Browser Node is Required",
+        "FieldType": "Requried",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon"
+        ]
+      },
+      {
+        "FrontEndLabel": "Manufacturer Contact",
+        "InputType": "String",
+        "Values": [],
+        "Validation": {
+          "type": "string",
+          "maxLength": 2461
+        },
+        "InfoMessage": "Provide the contact information (including address, zipcode) for the product's manufacturer.",
+        "ErrorMessage": "Manufacture Contact is Required",
+        "FieldType": "Requried",
+        "editable": false,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon"
+        ]
+      }
+    ],
+    "Section3": [
+      {
+        "FrontEndLabel": "Shirt Body Type",
+        "InputType": "DropDown",
+        "Values": {
+          "a": "A",
+          "ab": "AB",
+          "b": "B",
+          "bb": "BB",
+          "be": "BE",
+          "big": "Big",
+          "e": "E",
+          "husky": "Husky",
+          "j": "J",
+          "jy": "JY",
+          "plus": "Plus",
+          "regular": "Regular",
+          "slim": "Slim",
+          "y": "Y",
+          "ya": "YA"
+        },
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItemns": 1
+        },
+        "InfoMessage": "Provide the body type for apparel item, select \"Regular\" in case of no special body type.",
+        "ErrorMessage": "Shirt Body Type is Required",
+        "FieldType": "Required",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Target Gender",
+        "InputType": "DropDown",
+        "Values": {
+          "female": "Female",
+          "male": "Male",
+          "unisex": "Unisex"
+        },
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItemns": 1
+        },
+        "InfoMessage": "Provide the target gender for the product",
+        "ErrorMessage": "Target Gener is Required",
+        "FieldType": "Required",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Age Range",
+        "InputType": "DropDown",
+        "Values": {
+          "Adult": "Adult",
+          "Baby": "Baby",
+          "Kid": "Kid"
+        },
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItemns": 1
+        },
+        "InfoMessage": "Specify an appropriate age range description for the item",
+        "ErrorMessage": "Age Range is Required",
+        "FieldType": "Required",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Shirt Size System",
+        "InputType": "DropDown",
+        "Values": {
+          "as5": "IN"
+        },
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItemns": 1
+        },
+        "InfoMessage": "Provide the size system for the shirt.",
+        "ErrorMessage": "Shirt Size System is Required",
+        "FieldType": "Required",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Shirt Size Class",
+        "InputType": "DropDown",
+        "Values": {
+          "age": "Age",
+          "alpha": "Alpha",
+          "alpha_jaspo": "Alpha JASPO",
+          "neck": "Neck",
+          "neck_sleeve": "Neck Sleeve",
+          "numeric": "Numeric",
+          "numeric_go": "Numeric GO",
+          "numeric_height": "Numeric Height"
+        },
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItemns": 1
+        },
+        "InfoMessage": "Provide the size class for the shirt.",
+        "ErrorMessage": "Shirt Size Class is Required",
+        "FieldType": "Required",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      },
+      {
+        "FrontEndLabel": "Shirt Size Value",
+        "InputType": "DropDown",
+        "Values": {
+          "numeric_height_65": "65",
+          "numeric_3": "3",
+          "numeric_height_50": "50",
+          "23_months": "23 Months",
+          "numeric_40": "40",
+          "13x_l": "13XL",
+          "numeric_56": "56",
+          "numeric_124": "124",
+          "x_l": "XL",
+          "numeric_height_72": "72",
+          "xg": "XG",
+          "numeric_44": "44",
+          "numeric_38": "38",
+          "7x": "7X",
+          "numeric_10": "10",
+          "jaspo_6x_o": "6XO",
+          "go_6": "6 Go",
+          "numeric_4": "4",
+          "go_48": "48 Go",
+          "go_15": "15 Go",
+          "jaspo_5x_o": "5XO",
+          "numeric_102": "102",
+          "10_months": "10 Months",
+          "8x_l": "8XL",
+          "numeric_140": "140",
+          "xx_s": "2XS",
+          "5_years": "5 Years",
+          "17_months": "17 Months",
+          "numeric_height_80": "80",
+          "1_month": "1 Month",
+          "jaspo_x_c": "XC",
+          "jaspo_s_s": "SS",
+          "numeric_41": "41",
+          "numeric_95": "95",
+          "numeric_63": "63",
+          "numeric_119": "119",
+          "11x_l": "11XL",
+          "4x": "4X",
+          "17_years": "17 Years",
+          "numeric_height_137": "137",
+          "numeric_height_130": "130",
+          "numeric_17": "17",
+          "go_29": "29 Go",
+          "numeric_131": "131",
+          "numeric_73": "73",
+          "numeric_92": "92",
+          "numeric_188": "188",
+          "go_22": "22 Go",
+          "numeric_21": "21",
+          "numeric_31": "31",
+          "numeric_122": "122",
+          "numeric_43": "43",
+          "numeric_height_69": "69",
+          "numeric_83": "83",
+          "2_months": "2 Months",
+          "numeric_150": "150",
+          "numeric_height_120": "120",
+          "numeric_145": "145",
+          "numeric_height_180": "180",
+          "7_years": "7 Years",
+          "19_months": "19 Months",
+          "numeric_00": "00",
+          "numeric_182": "182",
+          "go_50": "50 Go",
+          "go_7": "7 Go",
+          "numeric_height_150": "150",
+          "numeric_49": "49",
+          "newborn": "Newborn",
+          "numeric_height_152": "152",
+          "go_23": "23 Go",
+          "numeric_108": "108",
+          "numeric_33": "33",
+          "xx_l": "2XL",
+          "numeric_37": "37",
+          "1_year": "1 Year",
+          "numeric_100": "100",
+          "3x_l": "3XL",
+          "numeric_65": "65",
+          "15_years": "15 Years",
+          "14_months": "14 Months",
+          "numeric_98": "98",
+          "numeric_36": "36",
+          "go_35": "35 Go",
+          "numeric_8": "8",
+          "7_l": "7L",
+          "numeric_99": "99",
+          "numeric_117": "117",
+          "go_47": "47 Go",
+          "3x_s": "3XS",
+          "numeric_6": "6",
+          "numeric_height_170": "170",
+          "ep": "EP",
+          "go_28": "28 Go",
+          "10_l": "10L",
+          "12_months": "12 Months",
+          "6_months": "6 Months",
+          "numeric_height_185": "185",
+          "go_36": "36 Go",
+          "ss": "SS",
+          "numeric_height_107": "107",
+          "micro": "Micro",
+          "go_33": "33 Go",
+          "go_44": "44 Go",
+          "2_years": "2 Years",
+          "go_26": "26 Go",
+          "1x": "1X",
+          "numeric_height_73": "73",
+          "s": "S",
+          "0x": "0X",
+          "12x_l": "12XL",
+          "numeric_77": "77",
+          "numeric_52": "52",
+          "numeric_70": "70",
+          "6x_l": "6XL",
+          "numeric_height_135": "135",
+          "numeric_139": "139",
+          "go_27": "27 Go",
+          "numeric_18": "18",
+          "l": "L",
+          "numeric_86": "86",
+          "numeric_45": "45",
+          "em": "EM",
+          "numeric_55": "55",
+          "22_months": "22 Months",
+          "jaspo_m": "M",
+          "numeric_27": "27",
+          "go_30": "30 Go",
+          "xxg": "XXG",
+          "numeric_85": "85",
+          "go_34": "34 Go",
+          "numeric_51": "51",
+          "numeric_107": "107",
+          "numeric_height_85": "85",
+          "numeric_170": "170",
+          "go_14": "14 Go",
+          "numeric_19": "19",
+          "numeric_42": "42",
+          "numeric_height_165": "165",
+          "jaspo_o": "O",
+          "numeric_123": "123",
+          "9x": "9X",
+          "numeric_109": "109",
+          "numeric_39": "39",
+          "jaspo_10x_ot": "10XOT",
+          "jaspo_3x_s": "3XS",
+          "jaspo_8x_ot": "8XOT",
+          "numeric_11": "11",
+          "numeric_75": "75",
+          "go_32": "32 Go",
+          "go_25": "25 Go",
+          "numeric_74": "74",
+          "numeric_89": "89",
+          "9_months": "9 Months",
+          "numeric_height_160": "160",
+          "go_39": "39 Go",
+          "11_years": "11 Years",
+          "numeric_61": "61",
+          "2x": "2X",
+          "numeric_111": "111",
+          "jaspo_x_b": "XB",
+          "21_months": "21 Months",
+          "jaspo_x_a": "XA",
+          "numeric_137": "137",
+          "8x": "8X",
+          "7_months": "7 Months",
+          "3_years": "3 Years",
+          "numeric_90": "90",
+          "4_l": "4L",
+          "numeric_105": "105",
+          "5x_s": "5XS",
+          "numeric_116": "116",
+          "go_41": "41 Go",
+          "numeric_78": "78",
+          "numeric_46": "46",
+          "jaspo_x_ot": "XOT",
+          "6_l": "6L",
+          "numeric_16": "16",
+          "numeric_152": "152",
+          "6_years": "6 Years",
+          "4x_s": "4XS",
+          "go_11": "11 Go",
+          "jaspo_9x_ot": "9XOT",
+          "numeric_height_122": "122",
+          "numeric_height_145": "145",
+          "go_42": "42 Go",
+          "go_20": "20 Go",
+          "4_years": "4 Years",
+          "go_12": "12 Go",
+          "numeric_48": "48",
+          "numeric_height_71": "71",
+          "numeric_height_70": "70",
+          "3x": "3X",
+          "numeric_height_66": "66",
+          "5_l": "5L",
+          "numeric_79": "79",
+          "numeric_96": "96",
+          "2x_l": "2XL",
+          "numeric_135": "135",
+          "jaspo_l": "L",
+          "18_years": "18 Years",
+          "jaspo_10x_o": "10XO",
+          "numeric_height_105": "105",
+          "go_9": "9 Go",
+          "numeric_129": "129",
+          "numeric_54": "54",
+          "numeric_height_110": "110",
+          "numeric_22": "22",
+          "numeric_130": "130",
+          "7x_age": "7X",
+          "numeric_height_114": "114",
+          "numeric_2": "2",
+          "numeric_height_100": "100",
+          "numeric_5": "5",
+          "numeric_height_149": "149",
+          "10x": "10X",
+          "numeric_32": "32",
+          "numeric_80": "80",
+          "numeric_138": "138",
+          "numeric_113": "113",
+          "go_24": "24 Go",
+          "3_months": "3 Months",
+          "numeric_101": "101",
+          "numeric_67": "67",
+          "20_months": "20 Months",
+          "go_49": "49 Go",
+          "numeric_81": "81",
+          "numeric_14": "14",
+          "go_2": "2 Go",
+          "m": "M",
+          "numeric_82": "82",
+          "numeric_127": "127",
+          "2x_s": "2XS",
+          "numeric_110": "110",
+          "numeric_84": "84",
+          "jaspo_2x_s": "2XS",
+          "numeric_height_75": "75",
+          "numeric_15": "15",
+          "9x_l": "9XL",
+          "numeric_164": "164",
+          "12_years": "12 Years",
+          "5x_l": "5XL",
+          "10x_l": "10XL",
+          "free_size": "Free Size",
+          "numeric_47": "47",
+          "go_4": "4 Go",
+          "jaspo_4x_o": "4XO",
+          "eg": "EG",
+          "numeric_23": "23",
+          "jaspo_2x_ot": "2XOT",
+          "numeric_height_55": "55",
+          "go_38": "38 Go",
+          "numeric_height_140": "140",
+          "jaspo_x_s": "XS",
+          "numeric_height_155": "155",
+          "jaspo_2x_o": "2XO",
+          "3_l": "3L",
+          "numeric_height_68": "68",
+          "numeric_1": "1",
+          "8_years": "8 Years",
+          "numeric_34": "34",
+          "6x": "6X",
+          "numeric_112": "112",
+          "4x_l": "4XL",
+          "numeric_height_153": "153",
+          "numeric_133": "133",
+          "go_8": "8 Go",
+          "numeric_25": "25",
+          "jaspo_ot": "OT",
+          "8_months": "8 Months",
+          "numeric_175": "175",
+          "numeric_118": "118",
+          "numeric_155": "155",
+          "go_13": "13 Go",
+          "numeric_88": "88",
+          "numeric_height_115": "115",
+          "jaspo_4x_s": "4XS",
+          "15x_l": "15XL",
+          "numeric_97": "97",
+          "numeric_30": "30",
+          "jaspo_6x_ot": "6XOT",
+          "l_l": "LL",
+          "numeric_57": "57",
+          "numeric_106": "106",
+          "numeric_height_90": "90",
+          "jaspo_9x_o": "9XO",
+          "numeric_7": "7",
+          "numeric_13": "13",
+          "numeric_height_125": "125",
+          "numeric_146": "146",
+          "numeric_180": "180",
+          "2_l": "2L",
+          "jaspo_5x_s": "5XS",
+          "17x_l": "17XL",
+          "14x_l": "14XL",
+          "jaspo_4x_ot": "4XOT",
+          "teeny": "Teeny",
+          "jaspo_x_o": "XO",
+          "go_16": "16 Go",
+          "go_5": "5 Go",
+          "numeric_69": "69",
+          "numeric_93": "93",
+          "jaspo_3x_ot": "3XOT",
+          "egg": "EGG",
+          "numeric_20": "20",
+          "numeric_height_175": "175",
+          "numeric_68": "68",
+          "16_months": "16 Months",
+          "numeric_62": "62",
+          "numeric_91": "91",
+          "numeric_160": "160",
+          "numeric_50": "50",
+          "numeric_height_60": "60",
+          "go_45": "45 Go",
+          "18_months": "18 Months",
+          "preemie": "Preemie",
+          "numeric_103": "103",
+          "numeric_53": "53",
+          "numeric_height_190": "190",
+          "go_31": "31 Go",
+          "jaspo_8x_o": "8XO",
+          "go_37": "37 Go",
+          "go_19": "19 Go",
+          "go_40": "40 Go",
+          "numeric_185": "185",
+          "one_size": "One Size",
+          "numeric_94": "94",
+          "numeric_87": "87",
+          "13_months": "13 Months",
+          "go_10": "10 Go",
+          "jaspo_6x_s": "6XS",
+          "numeric_115": "115",
+          "numeric_60": "60",
+          "numeric_132": "132",
+          "numeric_136": "136",
+          "5_months": "5 Months",
+          "6x_s": "6X-Small",
+          "10_years": "10 Years",
+          "numeric_26": "26",
+          "24_months": "24 Months",
+          "numeric_29": "29",
+          "14_years": "14 Years",
+          "go_18": "18 Go",
+          "go_1": "1 Go",
+          "numeric_24": "24",
+          "numeric_58": "58",
+          "jaspo_s": "S",
+          "x_s": "XS",
+          "numeric_76": "76",
+          "numeric_64": "64",
+          "numeric_165": "165",
+          "numeric_176": "176",
+          "jaspo_5x_ot": "5XOT",
+          "s_s_s": "SSS",
+          "numeric_66": "66",
+          "15_months": "15 Months",
+          "11_months": "11 Months",
+          "numeric_height_67": "67",
+          "18x_l": "18XL",
+          "go_17": "17 Go",
+          "7x_l": "7XL",
+          "8_l": "8L",
+          "6x_age": "6X",
+          "16_years": "16 Years",
+          "numeric_height_74": "74",
+          "jaspo_3x_o": "3XO",
+          "5x": "5X",
+          "13_years": "13 Years",
+          "numeric_126": "126",
+          "numeric_9": "9",
+          "numeric_71": "71",
+          "numeric_125": "125",
+          "numeric_120": "120",
+          "0_month": "0 Months",
+          "numeric_35": "35",
+          "9_years": "9 Years",
+          "go_46": "46 Go",
+          "numeric_104": "104",
+          "numeric_height_95": "95",
+          "4_months": "4 Months",
+          "numeric_72": "72",
+          "go_43": "43 Go",
+          "numeric_121": "121",
+          "go_21": "21 Go",
+          "go_3": "3 Go",
+          "numeric_114": "114",
+          "numeric_28": "28",
+          "go_0": "0 Go",
+          "numeric_12": "12",
+          "jaspo_7x_o": "7XO",
+          "numeric_190": "190",
+          "numeric_134": "134",
+          "numeric_128": "128",
+          "9_l": "9L",
+          "numeric_158": "158",
+          "jaspo_7x_ot": "7XOT",
+          "numeric_59": "59",
+          "16x_l": "16XL"
+        },
+        "Validation": {
+          "type": "array",
+          "minItems": 1,
+          "maxItemns": 1
+        },
+        "InfoMessage": "Provide the size class for the shirt.",
+        "ErrorMessage": "Shirt Size Class is Required",
+        "FieldType": "Required",
+        "editable": true,
+        "hidden": false,
+        "SupportedMarkePlace": [
+          "Amazon",
+          "Flipkart"
+        ]
+      }
+    ]
+  }
+}
