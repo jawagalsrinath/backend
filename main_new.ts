@@ -77,10 +77,16 @@ class Parser {
     return enums;
   }
 
-  enumValues() {
+   enumValues() {
     let data = this.json;
-    this.parsedObject["Values"] = this.getEnumValue(data);
-    return this
+    const enumValues = this.getEnumValue(data);
+
+  // Only add "Values" property if enumValues is not empty
+    if (Object.keys(enumValues).length > 0) {
+      this.parsedObject["Values"] = enumValues;
+    }
+
+    return this;
   }
 
   getFields(fields: FieldType[], retJson: any = {}, path?: string) {
@@ -176,6 +182,7 @@ const constructObject = (obj: any, key: string): any => {
     }])
     .extractFields(fieldsToGet, "items.properties.value")
     .addValidation()
+    .enumValues()
     .addErrorMessage(key)
     .parse();
 };
